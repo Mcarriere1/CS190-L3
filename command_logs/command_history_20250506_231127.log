@@ -1,0 +1,28 @@
+[2025-05-06 23:11:27] [/workspaces/CS190-L3] source .devcontainer/shell.sh
+[2025-05-06 23:12:18] [/workspaces/CS190-L3] grep "ERROR" system.log 
+[2025-05-06 23:12:36] [/workspaces/CS190-L3] grep -i "warning" system.log 
+[2025-05-06 23:12:41] [/workspaces/CS190-L3] grep  "warning" system.log 
+[2025-05-06 23:12:54] [/workspaces/CS190-L3] grep "WARNING" system.log 
+[2025-05-06 23:13:26] [/workspaces/CS190-L3] grep -n "INFO" system.log
+[2025-05-06 23:13:43] [/workspaces/CS190-L3] grep -c "ERROR" system.log
+[2025-05-06 23:13:43] [/workspaces/CS190-L3] grep -ic "WARNING" system.log
+[2025-05-06 23:13:43] [/workspaces/CS190-L3] grep -c "INFO" system.log
+[2025-05-06 23:13:45] [/workspaces/CS190-L3] grep -c "INFO" system.log
+[2025-05-06 23:13:54] [/workspaces/CS190-L3] grep -c "ERROR" system.loggrep -ic "WARNING" system.loggrep -c "INFO" system.log
+[2025-05-06 23:14:13] [/workspaces/CS190-L3] grep "^2025-04-01 1" system.log
+[2025-05-06 23:14:25] [/workspaces/CS190-L3] grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' system.log
+[2025-05-06 23:16:00] [/workspaces/CS190-L3] grep -E "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" contacts.txt
+[2025-05-06 23:16:23] [/workspaces/CS190-L3] sed "s/ERROR/CRITICAL/g" system.log > system_critical.log
+[2025-05-06 23:17:12] [/workspaces/CS190-L3] sed "/^$/d" sample.txt > sample_no_blank.txt
+[2025-05-06 23:17:34] [/workspaces/CS190-L3] sed -n "5,10p" sample.txt
+[2025-05-06 23:18:04] [/workspaces/CS190-L3] sed -e "s/Manager/Team Lead/g" -e "s/Developer/Software Engineer/g" contacts.txt > contacts_updated.txt
+[2025-05-06 23:18:15] [/workspaces/CS190-L3] sed "s/^/PROCESSED /" contacts.txt > contacts_processed.txt
+[2025-05-06 23:18:33] [/workspaces/CS190-L3] awk '{print $1, $NF}' contacts.txt
+[2025-05-06 23:18:45] [/workspaces/CS190-L3] awk '$3 > 10' sales.txt
+[2025-05-06 23:19:14] [/workspaces/CS190-L3] awk -F',' '{print $2, $3 * $4}' sales.txt
+[2025-05-06 23:19:26] [/workspaces/CS190-L3] awk -F',' '{sum += $3 * $4} END {print sum}' sales.txt
+[2025-05-06 23:20:36] [/workspaces/CS190-L3] awk -F',' '{print $1, $3}' contacts.txt
+[2025-05-06 23:20:47] [/workspaces/CS190-L3] awk -F'|' '$3 > 10' sales.txt
+[2025-05-06 23:21:06] [/workspaces/CS190-L3] awk -F'|' '{print $2, $5}' sales.txt
+[2025-05-06 23:21:21] [/workspaces/CS190-L3] awk -F'|' '{sum += $5} END {print sum}' sales.txt
+[2025-05-06 23:21:41] [/workspaces/CS190-L3] awk -F',' '{printf "%-20s %-15s %-30s\n", $1, $2, $3}' contacts.txt
